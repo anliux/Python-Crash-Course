@@ -36,8 +36,8 @@ class Car():
 
 
 
- # 9.4.2 - 在一个模块中存储多个类：加入类Battery和ElectricCar
- class Battery():
+# 9.4.2 - 在一个模块中存储多个类：加入类Battery和ElectricCar
+class Battery():
     """一个模拟电动汽车的简单尝试"""
     
     def __init__(self, battery_size=70):
