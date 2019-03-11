@@ -5,3 +5,5 @@
 ### 1-Alien Invasion
 ### 2-Data Visualization
 ### 3-Web Applications
+
+### [勘误](https://nostarch.com/pythoncrashcourse)
