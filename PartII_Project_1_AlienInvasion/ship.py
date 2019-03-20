@@ -59,3 +59,8 @@ class Ship():
     def blitme(self):
         """在指定位置绘制飞船"""
         self.screen.blit(self.image, self.rect)
+        
+    # 13.6.2-响应外星人和飞船碰撞-新增函数
+    def center_ship(self):
+        """让飞船在屏幕上居中"""
+        self.center = self.screen_rect.centerx
