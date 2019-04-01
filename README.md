@@ -1,5 +1,5 @@
 # 《Python编程：从入门到实践》
-## I_BASICS
+## [I_BASICS](https://github.com/anliux/Python_Crash_Course/blob/master/PartI_Basics/A_Basics_Note.ipynb)
 ###
 ## II_PROJECTS
 ### 1-Alien Invasion
