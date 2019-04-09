@@ -6,6 +6,6 @@
 ### 2-Data Visualization
 ### 3-Web Applications
 
-## [Reference](https://github.com/anliux/Python_Crash_Course/tree/master/Reference):
+### [Reference](https://github.com/anliux/Python_Crash_Course/tree/master/Reference):
 
-## [勘误](https://nostarch.com/pythoncrashcourse)
+### [勘误](https://nostarch.com/pythoncrashcourse)
