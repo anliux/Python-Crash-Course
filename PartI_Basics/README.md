@@ -1,6 +1,7 @@
 ## 第一部分-基础篇
 
-### [笔记-(注：.pybn格式)](https://github.com/anliux/Python_Crash_Course/blob/master/PartI_Basics/A_Basics_Note.ipynb)
+### [《笔记》](https://github.com/anliux/Python_Crash_Course/blob/master/PartI_Basics/A_Basics_Note.ipynb)
+* 注：《笔记》为.pybn格式，内含全部代码及相应的笔记
 
 ### 目录：
 
