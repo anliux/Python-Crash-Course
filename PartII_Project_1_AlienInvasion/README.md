@@ -1,4 +1,4 @@
-## AlienInvasion
+## AlienInvasion - <外星人入侵>
 
 * 基于pygame
 
