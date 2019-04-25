@@ -2,6 +2,7 @@
 
 ### [《笔记》](https://github.com/anliux/Python_Crash_Course/blob/master/PartI_Basics/A_Basics_Note.ipynb)
 * 注：《笔记》为.pybn格式，内含全部代码及相应的笔记
+* .ipynb文件若加载失败，可使用此链接打开 [https://nbviewer.jupyter.org/github/...](https://nbviewer.jupyter.org/github/anliux/Python_Crash_Course/blob/master/PartI_Basics/A_Basics_Note.ipynb)
 
 ### 目录：
 
