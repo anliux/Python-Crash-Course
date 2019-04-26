@@ -3,7 +3,7 @@
 ###
 ## II_PROJECTS
 ### 1-[Alien Invasion](https://github.com/anliux/Python_Crash_Course/tree/master/PartII_Project_1_AlienInvasion)
-### 2-Data Visualization
+### 2-[Data Visualization](https://github.com/anliux/Python_Crash_Course/tree/master/PartII_Project_2_DataVisualization)
 ### 3-Web Applications
 
 ### [Reference](https://github.com/anliux/Python_Crash_Course/tree/master/Reference):
