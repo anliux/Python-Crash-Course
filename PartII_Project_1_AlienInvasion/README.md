@@ -1,5 +1,9 @@
 ## AlienInvasion - <外星人入侵>
 
+* 12-武装飞船
+* 13-外星人
+* 14-计分
+
 ### [《笔记》](https://github.com/anliux/Python_Crash_Course/blob/master/PartII_Project_1_AlienInvasion/A_AlienInvasion.ipynb)
 * 基于pygame
 * 《笔记》为.ipybn格式，内含全部代码及相应的笔记
