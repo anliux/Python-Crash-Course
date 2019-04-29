@@ -6,9 +6,9 @@
 * .ipynb文件若加载失败，可使用此链接打开 [https://nbviewer.jupyter.org/github/...](https://nbviewer.jupyter.org/github/anliux/Python_Crash_Course/blob/master/PartII_Project_1_AlienInvasion/A_AlienInvasion.ipynb)
 
 ### 目录：
-* 12-武装飞船
-* 13-外星人
-* 14-计分
+* 12 - 武装飞船
+* 13 - 外星人
+* 14 - 计分
 
 ### 游戏规则：
 ### 知识点：
