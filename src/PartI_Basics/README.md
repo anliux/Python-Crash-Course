@@ -24,7 +24,8 @@
   - 例如：https://nbviewer.jupyter.org/github/anliux/Python_Crash_Course/blob/master/src/PartI_Basics/A_Basics_Note.ipynb
 
 # 00 综
-- [《综》](https://github.com/anliux/Python_Crash_Course/blob/master/src/PartI_Basics/A_Basics_Note.ipynb)
+- [《综》](https://github.com/anliux/Python-Crash-Course/blob/master/src/PartI_Basics/A_Basics_Note.ipynb)
+- [备用链接](https://nbviewer.jupyter.org/github/anliux/Python-Crash-Course/blob/master/src/PartI_Basics/A_Basics_Note.ipynb)
 - 各章汇总
 
 <!-- GFM-TOC -->
@@ -33,7 +34,8 @@
 
 
 # 01 起步
-- [第1章笔记]()
+- [第1章笔记](https://github.com/anliux/Python-Crash-Course/blob/master/src/PartI_Basics/01-%E8%B5%B7%E6%AD%A5.ipynb)
+- [第1章笔记-备用链接](https://nbviewer.jupyter.org/github/anliux/Python-Crash-Course/blob/master/src/PartI_Basics/01-%E8%B5%B7%E6%AD%A5.ipynb)
 - 知识点：
   - 打印hello world：`print('要打印的内容')`
   - 注意点：单双引号均可，没有分号。
@@ -48,7 +50,8 @@
 
 
 # 02 变量和简单数据类型
-- [第2章笔记]()
+- [第2章笔记](https://github.com/anliux/Python-Crash-Course/blob/master/src/PartI_Basics/02-%E5%8F%98%E9%87%8F%E5%92%8C%E7%AE%80%E5%8D%95%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B.ipynb)
+- [第2章笔记-备用链接](https://nbviewer.jupyter.org/github/anliux/Python-Crash-Course/blob/master/src/PartI_Basics/02-%E5%8F%98%E9%87%8F%E5%92%8C%E7%AE%80%E5%8D%95%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B.ipynb)
 - 知识点：
   - 汇总：
     - 认识变量、变量名规则、单双引号、字符串（大小写、拼接、空白）、数字（简单计算-除法、次方）、注释（单行多行）
@@ -104,7 +107,8 @@
 
 
 # 03 列表简介
-- [第3章笔记]()
+- [第3章笔记](https://github.com/anliux/Python-Crash-Course/blob/master/src/PartI_Basics/03-%E5%88%97%E8%A1%A8%E7%AE%80%E4%BB%8B.ipynb)
+- [第3章笔记-备用链接](https://nbviewer.jupyter.org/github/anliux/Python-Crash-Course/blob/master/src/PartI_Basics/03-%E5%88%97%E8%A1%A8%E7%AE%80%E4%BB%8B.ipynb)
 - 知识点：
   - 汇总：列表的认识、创建、访问单个元素、修改、添加、删除、字母表排序、反转排序、求列表长度、索引注意事项
   - 认识列表：
@@ -146,7 +150,8 @@
 
 
 # 04 操作列表
-- [第4章笔记]()
+- [第4章笔记](https://nbviewer.jupyter.org/github/anliux/Python-Crash-Course/blob/master/src/PartI_Basics/03-%E5%88%97%E8%A1%A8%E7%AE%80%E4%BB%8B.ipynb)
+- [第4章笔记-备用链接](https://nbviewer.jupyter.org/github/anliux/Python-Crash-Course/blob/master/src/PartI_Basics/04-%E6%93%8D%E4%BD%9C%E5%88%97%E8%A1%A8.ipynb)
 - 知识点：
   - 汇总：
     - for循环、缩进注意点、数值列表创建、数学统计（最值、求和）、列表解析、列表切片、元组、代码格式优化
@@ -214,7 +219,8 @@
 
 
 # 05 if语句
-- [第5章笔记]()
+- [第5章笔记](https://github.com/anliux/Python-Crash-Course/blob/master/src/PartI_Basics/05-if%E8%AF%AD%E5%8F%A5.ipynb)
+- [第5章笔记-备用链接](https://nbviewer.jupyter.org/github/anliux/Python-Crash-Course/blob/master/src/PartI_Basics/05-if%E8%AF%AD%E5%8F%A5.ipynb)
 - 知识点：
   - 汇总：
     - if语句，if-else，if-elif，多个if，各种if嵌套，
@@ -250,7 +256,8 @@
 
 
 # 06 字典
-- [第6章笔记]()
+- [第6章笔记](https://github.com/anliux/Python-Crash-Course/blob/master/src/PartI_Basics/06-%E5%AD%97%E5%85%B8.ipynb)
+- [第6章笔记-备用链接](https://nbviewer.jupyter.org/github/anliux/Python-Crash-Course/blob/master/src/PartI_Basics/06-%E5%AD%97%E5%85%B8.ipynb)
 - 知识点：
   - 汇总：
     - 字典，键唯一值不要求，字典无序，访问，添加，修改，删除，语句过长拆分，for遍历的三种方法，字典和列表的各种相互嵌套
@@ -321,7 +328,8 @@
 
 
 # 07 用户输入和while循环
-- [第7章笔记]()
+- [第7章笔记](https://github.com/anliux/Python-Crash-Course/blob/master/src/PartI_Basics/07-%E7%94%A8%E6%88%B7%E8%BE%93%E5%85%A5%E5%92%8Cwhile%E5%BE%AA%E7%8E%AF.ipynb)
+- [第7章笔记-备用链接](https://nbviewer.jupyter.org/github/anliux/Python-Crash-Course/blob/master/src/PartI_Basics/07-%E7%94%A8%E6%88%B7%E8%BE%93%E5%85%A5%E5%92%8Cwhile%E5%BE%AA%E7%8E%AF.ipynb)
 - 知识点：
   - 汇总：
     - input()，求模运算%，
@@ -363,7 +371,8 @@
 
 
 # 08 函数
-- [第8章笔记]()
+- [第8章笔记](https://github.com/anliux/Python-Crash-Course/blob/master/src/PartI_Basics/08-%E5%87%BD%E6%95%B0.ipynb)
+- [第8章笔记-备用链接](https://nbviewer.jupyter.org/github/anliux/Python-Crash-Course/blob/master/src/PartI_Basics/08-%E5%87%BD%E6%95%B0.ipynb)
 - 知识点：
   - 汇总：
     - 函数定义，函数调用(位置实参，关键字实参)，形参默认值，等效的函数调用(多种方法)，避免实参错误(数量等)，
@@ -474,7 +483,8 @@
 
 
 # 09 类
-- [第9章笔记]()
+- [第9章笔记](https://github.com/anliux/Python-Crash-Course/blob/master/src/PartI_Basics/09-%E7%B1%BB.ipynb)
+- [第9章笔记-备用链接](https://nbviewer.jupyter.org/github/anliux/Python-Crash-Course/blob/master/src/PartI_Basics/09-%E7%B1%BB.ipynb)
 - 知识点：
   - 汇总：
     - 类名首字母大写，方法(类中的函数)，init()，self，创建实例，命名规则，
@@ -589,7 +599,8 @@
 
 
 # 10 文件和异常
-- [第10章笔记]()
+- [第10章笔记](https://github.com/anliux/Python-Crash-Course/blob/master/src/PartI_Basics/10-%E6%96%87%E4%BB%B6%E5%92%8C%E5%BC%82%E5%B8%B8.ipynb)
+- [第10章笔记-备用链接](https://nbviewer.jupyter.org/github/anliux/Python-Crash-Course/blob/master/src/PartI_Basics/10-%E6%96%87%E4%BB%B6%E5%92%8C%E5%BC%82%E5%B8%B8.ipynb)
 - 知识点：
   - 汇总：
     - open()打开文件并返回文件对象、绝对路径和相对路径、不同系统中路径的斜杠或反斜杠、
