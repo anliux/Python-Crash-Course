@@ -478,7 +478,11 @@
 - 知识点：
   - 汇总：
     - 类名首字母大写，方法(类中的函数)，init()，self，创建实例，命名规则，
-    - 访问属性和调用方法(句点表示法)，创建多个实例，类中的每个属性都必须有初始值，有默认值的属性没有形参，修改属性的值的三种方法：实例修改；方法修改；方法递增，继承(super，super().__ init __(xx,xx)，子类的调用)，将实例作为类的属性及其调用，调用作为子类的属性之一的xx类的实例，导入类(一个模块中存储一个或多个类，导入单个类或多个类，导入整个模块，导入模块中的所有类，在一个模块中导入另一个模块类似嵌套)，Python标准库，类编码风格
+    - 访问属性和调用方法(句点表示法)，创建多个实例，
+    - 类中的每个属性都必须有初始值，有默认值的属性没有形参，修改属性的值的三种方法：实例修改；方法修改；方法递增，
+    - 继承(super，super().__ init __(xx,xx)，子类的调用)，将实例作为类的属性及其调用，调用作为子类的属性之一的xx类的实例，
+    - 导入类(一个模块中存储一个或多个类，导入单个类或多个类，导入整个模块，导入模块中的所有类，在一个模块中导入另一个模块类似嵌套)，
+    - Python标准库，类编码风格
   - 创建和使用类：
     - 使用类几乎可以模拟任何东西，之后可用类来创建特定的实例
     - 命名规则：Python中首字母大写的名称是类
@@ -489,6 +493,9 @@
       - init()下的self.xx为属性值的初始化
       - 以self为前缀的变量都可供类中的所有方法使用，还可通过类的任何实例来访问这些变量，像这样可通过实例访问的变量称为属性
   - 根据类创建实例：
+    - 可将类视为有关如何创建实例的说明
+      - `class Dog():  def __init__(self, name, age):`
+      - `my_dog = Dog('willie', 6)`
     - 使用实参调用类中的方法init()，并未显式地return但默认返回一个实例，并存储在自定义的变量中
   - 命名规则：
     - 首字母大写（Dog）默认指类，小写默认指根据类创建的实例（my_dog）
@@ -499,9 +506,73 @@
   - 创建多个实例：
     - 每个实例都是独立的个体，拥有自己的一组属性，即使属性相同。
     - 可按需根据一个类创建任意数量的实例，条件是将每个实例都存储在不同的变量中，或占用列表或字典的不同位置
-  -
-  -
-  -
+  - 使用类和实例
+    - 类中的每个属性都必须有初始值，哪怕这个值是0或空字符
+    - 有默认值的属性没有形参：如设置默认值，可在方法init()内指定这种初始值。并且在定义括号中无需包含为它提供初始值的形参
+      - eg： 在init()中定义默认值 self.odometer_reading = 0，则def行无需包含odometer_reading这个形参
+  - 修改属性的值：
+    - 三种方法：直接通过实例修改；通过方法进行设置；通过方法进行递增（增加特定的值）
+    - 法一：直接修改属性的值
+      - 通过实例直接访问它，使用句点表示法直接访问并设置汽车的属性odometer_reading
+      - eg：my_new_car.odometer_reading = 23
+    - 法二：通过方法修改属性的值
+      - 定义更新属性的方法，则无需直接访问属性，而将值传递给一个方法，由它在内部进行更新
+      - eg：def update_odometer(self, mileage):xxxxx 调用：my_new_car.update_odometer(45)
+    - 法三：通过方法对属性的值进行递增，与法二类似
+      - eg：def increment_odometer(self,miles): self.odometer_reading += miles
+      - """将里程表读数增加指定的量"""
+      - 调用：my_used_car.increment_odometer(100) --- 将里程表数值在原有基础上增加100(100是实参)
+  - 继承
+    - 原有的类-父类；新类-子类
+      - 子类继承了其父类的所有属性和方法，同时还可以定义自己的属性和方法
+    - 创建子类：
+      - 创建子类时，父类必须包含在当前文件中，且位于子类前面
+      - 创建子类的实例时，首先需要给父类的所有属性赋值
+      - 定义子类时，必须在括号内指定父类的名称
+        - 示例：`class ElectricCar(Car):`
+      - super()：一个特殊函数，帮助将父类和子类关联起来。
+        - 父类也称为超类（superclass），名称super由此得名
+      - super(). __ init __ (xx, xx, xx) 
+        - 这行代码位于子类的init()下，调用父类方法init()，xx是父类形参，让子类实例包含父类的所有属性
+      - 在子类中除init外，可def子类特有的方法，也可以重写父类已有、但子类要求功能不同的方法(父类已有且相同的不再赘述)
+        - 示例：`self.battery_size = 70` 功能重写略
+    - 子类调用：
+      - abc.function_name() -- 这个function可以是父类的，也可以是子类的
+    - 将实例用作属性：
+      - 将类的一部分作为一个独立的类提取出来
+      - eg：battery属性功能很多，故独立放到另一个类Battery中，并将一个Battery实例用作ElectricCar类的一个属性(最后一句关键)
+    - 将实例用作属性的定义类：
+      - def Car() \\ def Battery() \\ def ElectricCar(Car) \\
+      - 其中ElectricCar类中的init部分，除了继承父类的super().__init__(xx,xx,xx..)外，还要有一句：
+        - self.battery = Battery()  -- 创建一个新的Battery实例，并存储在属性self.battery中
+        - 此时，每当子类的__init__()方法被调用时，都将执行该操作。
+        - 因此现在每个ElectricCar实例都包含一个自己创建的Battery实例
+      - 调用作为子类的属性之一的Battery类的实例：
+        - my_tesla.battery.describe_battery()，my_tesla存储实例
+        - 这行代码在实例my_tesla中查找属性battery，并对储存在该属性中的Batter实例调用方法describe_battery()
+        - battery在ElectricCar的init中初始化了
+        - 故这里可以作为实例的一个属性使用，并且更深入地调用Battery中的功能describe_battery()
+  - 导入类
+    - Python允许你将类存储在模块中，然后在主程序中导入所需的模块
+      - 注：第8章导入是将函数存储在模块中，from filename import xx_function，导入函数，而这里是import class
+        - 设独立文件中的某模块：module_name.py ---- 内含多个类 Class_1, Class_2, .. , Class_n
+    - 导入单个类：
+      - from module_name import Class_1
+      - 在一个模块中存储多个类，并导入其中一个：from module_name import Class_i
+      - 从一个模块中导入多个类：from module_name import Class_1, Class_2, Class_n
+      - 创建实例并调用：a = Class_i() \\ a.function_j().... 
+      - 直接Class创建；直接function调用，不用带类名
+    - 导入整个模块：import module_name
+      - 创建实例并调用：a = module_name.Class_i() \\ a.function_i().... 
+      - 创建声明模块名和类名；直接function调用，不用带类名
+    - 导入模块中的所有类：from module_name import * (和所有函数的区别是什么..)
+      - 不推荐星号import，如需从一个模块中导入很多类，最好导入整个模块，并使用 module_name.Class_name来访问类
+    - 在一个模块中导入另一个模块：当有import关系的类分布在不同文件中时
+      - 创建实例并调用：直接Class创建；直接function调用，不用带类名
+      - module_1.py: Class_1  module_2.py: from module_1 import Class_1  Class_2
+      - a = Class_1()    b = Class_2()    
+      - a.function_1()    b.function_2()
+    - 注：只有导入整个模块时需要在创建时声明模块名和类名，其他情况都是只声明类名；调用都是直接function调用，不用带类名
   - Python标准库
   - 类编码风格：
     - 你必须熟悉有些与类相关的编码风格问题，在你编写的程序较复杂时尤其如此。
@@ -519,6 +590,117 @@
 
 # 10 文件和异常
 - [第10章笔记]()
+- 知识点：
+  - 汇总：
+    - open()打开文件并返回文件对象、绝对路径和相对路径、不同系统中路径的斜杠或反斜杠、
+    - with关键字与close()、read()读取文件并返回字符串、strip()删除空格、逐行读取、readline()、readliens()、
+    - 读取文本文件默认为字符串若需要数字需转换、open(filename,'w')、
+    - 模式实参、写入模式注意覆盖、只能将字符串写入文本文件(必要时str转换)、写入多行(write()语句中添加换行、制表符、空格等)、
+    - 附加模式'a'(不覆盖原有内容，将新写入添加到末尾)、指定文件名不存在时自动新建并写入、
+    - try-except-else代码块(格式、功能等)、split()方法、pass语句(什么都不做语句)、
+    - JSON文件的写入和读取(json.dump()和json.load())、及时考虑错误处理(读取文件时考虑FileNotFoundError等可能的错误)、
+    - 代码重构
+  - 从文件中读取数据的常用功能：
+    - rstrip()方法：删除字符串末尾多余的空行（如10.1.1）
+    - strip()方法：删除字符串两边的空格（如10.1.5）
+    - readline()-读取每个字符； 
+    - readlines()-读取每一行 ---- 一般用在for循环中（如10.1.4）
+  - 读取整个文件：
+    - 示例：`with open('pi_digits.txt') as file_object:`
+      - 函数open()：传入要打开的文件的名称，返回一个‘表示文件的对象’，并存储在指定变量中(file_object)
+      - open()之后Python会在当前执行的文件所在的目录找那个查找指定的文件
+      - open()是默认打开当前文件夹下的文件，否则需要提供文件路径
+    - 示例续：`contents = file_object.read()
+      - 前面拿到文件对象后，这一步使用方法read()读取这个文件的全部内容，并将其作为一个‘长字符串’存储在变量中`
+  - 不同系统中路径的斜杠和反斜杠：
+    - Windows系统中，在文件路径中使用反斜杠（ \ ）而不是斜杠（ / ）
+  - 当前文件夹下文件打开：
+    - 格式：with open('filename.txt') as file_object:xxx
+  - 非当前文件夹下文件打开：
+    - 相对路径和绝对路径
+  - 绝对路径和相对路径：
+    - 绝对路径：程序在电脑中的完整路径那种路径
+    - 相对路径：在当前py程序文件目录下有的文件夹路径，可以直接省略程序文件所在，直接写文件夹名字+文件名
+  - 相对路径：省略程序所在路径的部分（绝对路径中前面的部分可以省略）
+    - 格式：with open('text_files\filename.txt') as file_object:
+    - 打开的是程序所在路径下的text_files的文件夹，名为filename.txt的文件时
+  - 绝对路径：提供完整的路径。注意win系统中使用反斜杠，linux和OS X中使用斜杠
+    - 格式：绝对路径内容太长可单独存放在变量中先。
+    - 首先将路径单独存放在变量中：`file_path = '/home/ehmatthes/other_files/text_files/filename.txt' `
+    - with打开文件时，将路径变量传入：`with open(file_path) as file_object: xxx`
+  - 关键字with：在不再需要访问文件后将其关闭。
+    - 若手动使用close()关闭，可能存在过早或过晚关闭文件导致的错误，用with结构则不存在这样的问题
+  - 读取文件 
+    - 格式：abc = file_object.read()
+    - open拿到文件对象后，使用方法read()读取这个文件的全部内容，并作为一个‘长字符串’存储在变量abc中
+    - rstrip()方法：删除字符串末尾多余的空行
+    - strip()方法：删除字符串两边的空格(没记错的话应该是这样，lstrip()是删除左边的空格)
+  - 逐行读取：for循环+line方法（rstrip配合食用）
+    - 格式：for line in file_object: # file_object
+    - 注：for line in listname: xxx -- 这里listname是按行的，for语句默认逐行读取了，略迷
+  - 将读取到的各行存储在列表中：
+    - with关键字：open()返回的文件对象只在with代码块内可用
+    - 如想在with代码块外访问文件内容，可在with代码块内将文件的各行存储在一个列表中
+    - 代码示例：
+      - with open(filename) as file_object:
+      - lines = file_object.readlines() # 读取每一行并存储在变量lines中作为一个列表
+      - readline() - 读取单个字符，readlines() - 读取每一行
+    - 注：读取文本文件时，将其中所有文本都默认为字符串。可按需使用int()或float()将其转换为数字
+  - 生日在pi中小代码片段
+  - 写入文件：write()方法：写入
+    - 写入格式：with open(filename,'w') as file_object: file_object.write('xxxxx.')
+      - open的第一个实参是要打开的文件的名称；第二个实参表示打开这个文件所用的模式
+    - 模式实参：读取模式'r'，写入模式'w'，附加模式'a'，读取+写入模式'r+'
+      - 省略了模式实参时，将以默认的只读模式打开文件
+    - 当要写入的文件不存在时，函数open()将自动创建它
+    - w模式要小心：如果指定文件已存在，在返回文件对象前清空（覆盖？？）该文件
+    - 只能将字符串写入文本文件中。
+    - 若要将数值数据存储到文本文件中，必须先使用str()将其转换为字符串
+  - 写入多行：
+    - write()不会在写入的文本末尾添加换行符，需要在语句中包含换行符、制表符、空格等
+  - 附加到文件：
+    - 用附加模式'a'打开文件：写入到文件的行都将添加到文件末尾。
+    - 如果指定的文件不存在，将创建一个空文件
+  - 异常
+    - 异常概述：
+      - 当发生让Python不知所措的错误时，它都会创建一个异常对象。
+      - 如果你编写了处理该异常的代码，程序将继续运行。
+      - 否则，程序将停止，并显示一个traceback，其中包含有关异常的报告
+    - try-except-else代码块：
+      - 出现异常，程序也将继续运行，并显示编写好的友好的错误信息。
+      - try-except-else代码块：类似于if-else代码块，可帮助程序友好、安全地执行
+        - 安全：将可能发生错误的除法部分放到try-except代码块中，防止恶意崩坏
+      - 格式：try: xxx except xxxError: yyy else: zzz
+        - 尝试执行xxx：如果xxx错误，则yyy；否则，zzz
+      - try顺序执行：
+        - 如果出现except错误，执行except语句；
+        - 如果没有出现except错误，跳过except部分，继续执行(若有else，执行else语句)；
+        - try必执行，except相当于if xx，else可省略
+  - split()方法：根据一个字符串，按照空格创建一个单词列表
+    - split()方法：将字符串按照空格划分，创建为单词列表(字符列表)(没有空格按一个单词创建)
+    - 格式：a = strname.split() -- 根据strname中的字符串生成单词列表
+  - 多个文件：def封装功能并配合for循环食用
+  - pass语句：可在代码块中使用来让Python什么都不要做
+    eg：except xxxError: pass
+       则预设错误出现时，什么都不做，继续执行程序的其他部分
+       凭借经验可判断该在程序的什么地方包含异常处理块，以及出现错误时该向用户提供多少相关的信息
+  - 存储数据
+    - JSON：一种在程序之间共享数据的简单方式
+      - JSON(JavaScript Object Notation)格式最初是为JavaScript开发的，随后成了一种常见格式，被包括Python在内的众多语言采用。
+      - 使用前需要导入json模块：import json
+      - json的写入和读取：json.dump()--写入；json.load()--读取
+      - 注：菜鸟教程里的是复数，括号里的参数也很多设置dumps，loads
+    - 写入格式：
+      - `with open(filename, 'w') as f_obj: # 以写入模式打开这个文件。若文件不存在，将新建这个文件`
+      - `json.dump(listname, f_obj) # 使用函数json.dump()将列表listname存储到文件numbers.json中`
+    - 读取格式：
+      - `with open(filename) as f_obj:`
+      - `a = json.load(f_obj) # 将读取到的json文件内容存储到变量a中`
+    - open()--如果文件不存在，读取模式不会创建新文件会报错，写入模式会创建新文件
+      - 为保护程序，需要将FileNotFoundError写入try-except代码块中
+      - 具体：try-读取文件，except-FileNotFoundError：以写入模式读取。
+  - 重构：
+    - 多个功能时，可重构，将不同功能def封装到单个函数中
 
 <!-- GFM-TOC -->
 - [返回目录](#目录)
